@@ -6,5 +6,3 @@
 #include<stdio.h>
 #include<stdlib.h>
 #endif
-
-#include<GL/freeglut.h>
