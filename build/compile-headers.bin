@@ -5,3 +5,7 @@ time gcc ../src/pch.h
 echo ""
 echo "compiling rcp.h"
 time gcc ../src/rcp.h
+
+echo ""
+echo "compiling ecl.h"
+time gcc ../src/ecl.h
