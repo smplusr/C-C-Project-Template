@@ -5,33 +5,33 @@ Template for C and C++ projects.
 
 FILE ARCHITECTURE:
 
->    origin/
->       |
->       |               _               _
->       |---------------|---------------|
->       |               |               |
->       V               V               V
->      src/           build/           bin/
->       |               |               |
->       |               |               V
->       |               |             a.out
->       |               |               
->       |               |               
->       |               |               _
->       |               |---------------|
->       |               |               |
->       |               V               V
->       |   compile-source.bin    compile-headers.bin
->       |
->       |
->       |               _
->       |---------------|
->       |               |
->       V               V
->     main.c          mods/
->                       |               _
->                       |---------------|
->                       |               |
+.    origin/
+.       |
+.       |               _               _
+.       |---------------|---------------|
+.       |               |               |
+.       V               V               V
+.      src/           build/           bin/
+.       |               |               |
+.       |               |               V
+.       |               |             a.out
+.       |               |               
+.       |               |               
+.       |               |               _
+.       |               |---------------|
+.       |               |               |
+.       |               V               V
+.       |   compile-source.bin    compile-headers.bin
+.       |
+.       |
+.       |               _
+.       |---------------|
+.       |               |
+.       V               V
+.     main.c          mods/
+.                       |               _
+.                       |---------------|
+.                       |               |
 >                       V               V
 >                     misc/           libs/
 >                       |               |
