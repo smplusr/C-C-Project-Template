@@ -28,12 +28,12 @@ FILE ARCHITECTURE:
        |---------------|
        |               |
        V               V
-     main.c          mods/
+     main.c           mod/
                        |               _
                        |---------------|
                        |               |
                        V               V
-                     misc/           libs/
+                      ext/            lib/
                        |               |
                        |               |
                        |               V
@@ -53,9 +53,9 @@ INFO:
 > Both elc.h and rcp.h are imported modules from the c-cpp-utilities project.
 
 > The src/ folder contains all the sources and headers used in a project.
-> The mods/ folder contains all the modules.
-> The misc/ folder contains miscalenous modules, such as elc.h and rcp.h.
-> The libs/ folder contains pch.h, the declaration of inclusion and headers.
+> The mod/ folder contains all the modules.
+> The ext/ folder contains external modules, such as elc.h and rcp.h.
+> The lib/ folder contains pch.h, the declaration of inclusion and headers.
 
 > The build/ folder contains instructions for the rcp.h module.
 
