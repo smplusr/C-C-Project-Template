@@ -1,11 +1,11 @@
 echo ""
 echo "compiling pch.h"
-time gcc ../src/pch.h
+time gcc ../src/mod/lib/pch.h
 
 echo ""
 echo "compiling rcp.h"
-time gcc ../src/rcp.h
+time gcc ../src/mod/ext/rcp.h
 
 echo ""
 echo "compiling ecl.h"
-time gcc ../src/ecl.h
+time gcc ../src/mod/ext/ecl.h
