@@ -4,8 +4,8 @@
 #define RCP_SOURCE_PATH "../build/compile-sources.bin"
 #define RCP_HEADER_PATH "../build/compile-headers.bin"
 
-#include"mods/libs/pch.h"
-#include"mods/misc/ecl.h"
-#include"mods/misc/rcp.h"
+#include"mod/lib/pch.h"
+#include"mod/ext/ecl.h"
+#include"mod/ext/rcp.h"
 
 int main(){}
