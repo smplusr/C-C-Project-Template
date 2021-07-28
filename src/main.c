@@ -7,5 +7,8 @@
 #include"mod/lib/pch.h"
 #include"mod/ext/ecl.h"
 #include"mod/ext/rcp.h"
+#include"mod/ext/soc.h"
 
-int main(){}
+int main(){
+	evalf("file-example.bin");
+}

@@ -1,0 +1,16 @@
+#ifndef __cplusplus
+
+#include<stdio.h>
+#include"../src/mod/ext/soc.h"
+
+void HelloPrint(){printf("%s","Hello World !\n");}
+void __init__(){
+	ITEM object_instance;
+	object_instance.func=HelloPrint;
+	add_item(object_instance);
+	upt_item();
+	ITEM_LOOP(printf("%d",item_list[i].id); printf("\n"););
+	del_item(0);
+}
+
+#endif
