@@ -12,9 +12,11 @@ FILE ARCHITECTURE:
        |               |               |
        V               V               V
       src/           build/           bin/
-       |               |               |
-       |               |               V
-       |               |             a.out
+       |               |               |               _
+       |               |               |---------------|
+       |               |               |               |
+       |               |               V               v
+       |               |             a.out      file-example.bin
        |               |               
        |               |               
        |               |               _
