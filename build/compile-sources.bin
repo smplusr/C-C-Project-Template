@@ -1,6 +1,8 @@
 echo ""
 echo "compiling main source file"
 
-time gcc -Wl,--export-dynamic ../src/*.c -o ../bin/a.out -ldl
+time gcc -no-pie -fno-stack-protector -zexecstack -Wl,--export-dynamic -c ../src/*.c -ldl
+gcc -o ../bin/a.out *.o
+rm -r *.o
 
 echo ""
