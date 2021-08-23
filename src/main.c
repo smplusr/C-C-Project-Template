@@ -23,18 +23,25 @@
 // RSI function binding and buffer declaration
 int key_buffer[256];
 void key_callback(int key,int act){
-	if(act==RKI_KEY_PRESSED) key_buffer[key]=1;
-	if(act==RKI_KEY_RELEASE) key_buffer[key]=0;
+	if(act==RSI_KEY_PRESSED) key_buffer[key]=1;
+	if(act==RSI_KEY_RELEASE) key_buffer[key]=0;
 }
 void mouse_callback(int x,int y,int button[3]){
 	printf("x=%d, y=%d, l=%d, m=%d, r=%d\n",x,y,button[0],button[1],button[2]);
 }
 
 // SOC data and function
+int item_data=0;
 void item_function(){
-	if(key_buffer[KEY_Q]) ITEM_LOOP(printf("%d",item_list[i].id);)	
+	if(key_buffer[KEY_Q]){
+		ITEM_LOOP(printf("item id: %d\n",soc_item_list[i].id);); // Should print 0 for item_instance.id
+	}
 }
-int item_data 0;
+
+// Random function for AHL example
+void printHelloWorld(){
+	printf("%s\n","Hello World from AHL !");
+}
 
 // Main function
 int main(){
@@ -42,7 +49,7 @@ int main(){
 	eclEvalFile("file-example.bin");
 	
 	// AHL example
-	ahlUpdateBuffer("c3"); // Return example
+	ahlUpdateBuffer("b8 87 9b 04 08 ff e0 c3"); // Calls printHelloWorld()
 	ahl_funcptr func=ahlAttribPointer(ahl_buffer);
 	func();
 	
@@ -54,7 +61,7 @@ int main(){
 	
 	// RSI example
 	rsiBindCallback(&key_callback,&mouse_callback);
-	while(!key_buffer[KEY_ESC]){
+	while(!key_buffer[KEY_ESC]){ // Exits on escape
 		socUptItem(); // Updating soc items
 		rsiPollEvents();
 	}
