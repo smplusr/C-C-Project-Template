@@ -2,6 +2,11 @@ echo ""
 echo "compiling pch.h"
 time gcc ../src/mod/lib/pch.h
 
+
+echo ""
+echo "compiling ahl.h"
+time gcc ../src/mod/ext/ahl.h
+
 echo ""
 echo "compiling ecl.h"
 time gcc ../src/mod/ext/ecl.h
@@ -9,6 +14,10 @@ time gcc ../src/mod/ext/ecl.h
 echo ""
 echo "compiling rcp.h"
 time gcc ../src/mod/ext/rcp.h
+
+echo ""
+echo "compiling rsi.h"
+time gcc ../src/mod/ext/rsi.h
 
 echo ""
 echo "compiling soc.h"
