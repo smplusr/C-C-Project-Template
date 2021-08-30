@@ -55,12 +55,12 @@ int main(){
 	eclEvalFile("file-example.bin");
 	
 	// AHL example
-	ahlUpdateBuffer("b8 87 9b 04 08 ff e0 c3"); // Calls printHelloWorld()
+	ahlUpdateBuffer("b8 ca 9b 04 08 ff e0 c3"); // Calls printHelloWorld()
 	ahl_funcptr func=ahlAttribPointer(ahl_buffer);
 	func();
 	
 	// Soc example
-	ITEM object_instance;
+	SOC_ITEM object_instance;
 	object_instance.type="unknown";
 	*object_instance.data=*item_data;
 	object_instance.func=item_function;
