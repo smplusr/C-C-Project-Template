@@ -34,7 +34,7 @@ void mouse_callback(int x,int y,int button[3]){
 void *item_data[65536]={(void*)20,(void*)10,"aaa"};
 void item_function(){
 	if(key_buffer[KEY_Q]){
-		SOC_CHECKED_LOOP("unknown",			
+		SOC_ITEM_LOOP(			
 			SOC_DATA_LOOP(soc_item_list[i].data,	
 				if(soc_item_list[i].data[j]==(void*)10)	
 				printf("%s\n","First and only item has type 'unknown' and contains '10' inside it's data array");
@@ -61,7 +61,6 @@ int main(){
 	
 	// Soc example
 	SOC_ITEM object_instance;
-	object_instance.type="unknown";
 	*object_instance.data=*item_data;
 	object_instance.func=item_function;
 	socAddItem(object_instance);
